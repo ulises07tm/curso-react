@@ -1,0 +1,13 @@
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 2rem;
+    padding: 2rem;
+    background-color: sandybrown;
+}
+
+.secondarybrand {
+    color: white;
+    font-size: 2rem;
+}

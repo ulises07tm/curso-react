@@ -1,0 +1,21 @@
+.navbar {
+    background-color: saddlebrown;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 3rem;
+    margin-left: 1rem ;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3rem;
+}
