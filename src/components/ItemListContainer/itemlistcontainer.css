@@ -1,13 +1,44 @@
-.bienvenida {
+.div-main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;    
-    margin: 2rem;
+    margin: 0rem;
     padding: 2rem;
-    background-color: sandybrown;
+    /* background-color: cornflowerblue; */
 }
-
 .secondarybrand {
     color: white;
-    font-size: 2rem;
+    font-size: 4.5rem;
+    margin-top: 8rem;
+    margin-bottom: 14rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto);   
+    gap: 20rem;                              
+    margin: 0rem;                         
+}
+
+
+
+.product-card {
+    border: 4px solid cornflowerblue;   
+    padding: 2rem;              
+    text-align: center;           
+    border-radius: 5px;          
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    background-color: white;
+    text-decoration: none;
+}
+
+
+.name-item {
+    font-size: 3rem;
+    color: cornflowerblue;
+}
+.price-item {
+    font-size: 3rem;
+    color: cornflowerblue;
 }

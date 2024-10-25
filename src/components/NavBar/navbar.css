@@ -3,20 +3,24 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: saddlebrown;
-    color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     padding: 2rem;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
 }
 
 .brand {
-    font-size: 3rem;
-    margin-left: 1rem ;
+    font-size: 5rem;
+    margin-left: 2rem ;
+    color: white;
 }
 
 .list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 3rem;
-}
+    list-style-type: none;
+    gap: 9rem;
+}  
