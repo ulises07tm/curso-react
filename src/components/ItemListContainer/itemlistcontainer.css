@@ -28,7 +28,6 @@
     padding: 2rem;              
     text-align: center;           
     border-radius: 5px;          
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     background-color: white;
     text-decoration: none;
 }
@@ -41,4 +40,14 @@
 .price-item {
     font-size: 3rem;
     color: cornflowerblue;
+}
+
+
+
+.loading-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
 }

@@ -1,0 +1,50 @@
+.item-div {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    align-items: left;
+}
+
+
+.item-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.item-rest {
+    color: cornflowerblue;
+    background-color: white; 
+    border: 3px solid cornflowerblue;
+    border-radius: 8px ;
+    font-size: 2rem; 
+    width: 2rem;
+    padding: 0rem;
+    align-items: center; 
+}
+
+.item-add {
+    color: cornflowerblue;
+    background-color: white; 
+    border: 3px solid cornflowerblue;
+    border-radius: 10px ;
+    font-size: 2rem;
+    width: 3rem;
+}
+
+.item-count {
+    font-size: 2rem;
+}
+
+.item-add-cart {
+    width: 25rem;
+    height: 4rem;
+    font-size: 2rem; 
+    align-items: center; 
+    color: cornflowerblue;
+    background-color: white; 
+    border: 3px solid cornflowerblue;
+    border-radius: 10px ;
+}

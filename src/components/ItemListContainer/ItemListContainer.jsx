@@ -7,9 +7,11 @@ import ItemList from './ItemList.jsx'
 const ItemListContainer = ( { bienvenida } ) => {
 
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
     const { idCategory } = useParams()
 
     useEffect(()=> {
+        setLoading(true)
 
         getProducts()
         .then ((data) =>{
@@ -25,7 +27,7 @@ const ItemListContainer = ( { bienvenida } ) => {
             console.error (error)
         })
         .finally (() => {
-            console.log ("finalizo la promesa")
+            setLoading(false)
         })
 
     }, [idCategory])
@@ -33,7 +35,13 @@ const ItemListContainer = ( { bienvenida } ) => {
     return (
         <div className='div-main'>
             <h2 className='secondarybrand'>{bienvenida}</h2>
-                <ItemList products= {products}/>
+            {
+                loading === true ? (
+                    <div className="loading-item">Cargando...</div>
+                ) : (
+                    <ItemList products= {products}/>
+                )
+            }
         </div>
     )
 }

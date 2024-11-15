@@ -16,4 +16,6 @@ body {
   background-position: center; 
   background-repeat: no-repeat;
   backdrop-filter: blur(10px);
+  min-height: 100vh;
+  color: white;
 }

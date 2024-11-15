@@ -10,11 +10,17 @@
     text-decoration: none;
     color: white;
 }
+.navbar a:hover{
+    color: cornflowerblue;
+}
 
 .brand {
     font-size: 5rem;
     margin-left: 2rem ;
     color: white;
+}
+.brand:hover{
+    color: cornflowerblue;
 }
 
 .list {
