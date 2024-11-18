@@ -1,16 +1,17 @@
 .item-div {
     display: flex;
     flex-direction: column;
-    margin: 0rem;
-    align-items: left;
 }
 
 
-.item-button {
+.item-div div {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
+    gap: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -19,10 +20,12 @@
     background-color: white; 
     border: 3px solid cornflowerblue;
     border-radius: 8px ;
-    font-size: 2rem; 
-    width: 2rem;
-    padding: 0rem;
     align-items: center; 
+    font-size: 2rem; 
+    width: 3rem;
+}
+.item-rest {
+    cursor: pointer;
 }
 
 .item-add {
@@ -33,10 +36,15 @@
     font-size: 2rem;
     width: 3rem;
 }
+.item-add:hover {
+    cursor: pointer;
+}
 
 .item-count {
     font-size: 2rem;
 }
+
+
 
 .item-add-cart {
     width: 25rem;
@@ -47,4 +55,7 @@
     background-color: white; 
     border: 3px solid cornflowerblue;
     border-radius: 10px ;
+}
+.item-add-cart:hover {
+    cursor: pointer;
 }

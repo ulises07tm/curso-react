@@ -8,8 +8,7 @@
 .card-descript {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: left;
+    justify-content: space-between;
     margin-left: 5rem;
 }
 
@@ -62,5 +61,5 @@
     justify-content: end;
     text-align: center;
     font-size: 4rem;
-    margin-top: 30rem;
+    margin-top: 38rem;
 }

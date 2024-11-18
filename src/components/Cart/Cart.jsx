@@ -2,38 +2,43 @@ import "./cart.css"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
+import { FaTrash } from "react-icons/fa";
 
 const Cart = () => {
     const { cart, totalPrice, deleteProductById, deleteCart } = useContext(CartContext)
 
     if(cart.length === 0){
         return (
-            <div className="div-cart">
-                <h2  className="h2-cart">No hay productos en el carrito 😤</h2>
-                <Link to="/"  className="link-cart">Volver al inicio</Link>
+            <div className="div-empty-cart">
+                <h2  className="h2-empty-cart">No hay productos en el carrito 😤</h2>
+                <Link to="/" className="link-empty-cart">Volver al inicio</Link>
             </div>
         )
     }
 
     return (
         <div>
-            <h2>Productos en el carrito</h2>
+            <div className="div-brand">
+                <h2 className="brand-cart">Productos en el carrito</h2>
+            </div>
             {
                 cart.map( (productCart) => (
-                    <div key={productCart.id}>
-                        <img src={productCart.image} width={100} alt="" />
-                        <p>{productCart.name}</p>
-                        <p>Cantidad: {productCart.quantity}</p>
-                        <p>precio c/u: {productCart.price}</p>
-                        <p>precio parcial: {productCart.quantity * productCart.price}</p>
+                    <div key={productCart.id} className="div-cart">
+                        <img src={productCart.image} width={100} alt="" className="div-cart"/>
+                        <p className="name-cart">{productCart.name}</p>
+                        <p className="quantity-cart">Cantidad: {productCart.quantity}</p>
+                        <p className="price-cart">precio c/u: {productCart.price}</p>
+                        <p className="partial-cart">precio parcial: {productCart.quantity * productCart.price}</p>
                     
-                    <button onClick={ () => deleteProductById(productCart.id)}>borrar producto</button>
+                    <button onClick={ () => deleteProductById(productCart.id)}><FaTrash /></button>
                     </div>
                 ) )
             }
-
-            <p>Precio total: {totalPrice()}</p>
-            <button onClick={deleteCart}>borrar carrito</button>
+            <div className="div-secondary">
+                <p className="total-cart">Precio total: {totalPrice()}</p>
+                <Link to="/checkout">terminar mi compra</Link>
+                <button onClick={deleteCart} className="delete-cart">Vaciar carrito</button>
+            </div>
         </div>
     )
 }

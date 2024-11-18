@@ -2,7 +2,7 @@ const products = [
     {
         id: "df2121",
         name: "Drop Shot Sakura",
-        description: " Descripcion: PALETA DE PADEL DROP SHOT SAKURA 3.0. Dentro de la coleccion de palas de pádel Drop Shot conoce la nueva Drop Shot Sakura 3.0, una pala destinada a todo jugador que se inicia en el pádel, sin importar edad o género.La pala Drop Shot Sakura 3.0 es una pala que combina materiales flexibles con la goma Eva Soft, asi consigue una gran pegada y un amplio punto dulce en el golpeo.Gracias a la tecnología Cork Grip, las vibraciones en el golpeo son reducidas combinado con un marco de doble tubular de carbono.Una pala diseñada para jugadores de nivel iniciación avanzado que buscan un producto que aporte potencia y confort a su juego.",
+        description: "La paleta Drop Shot Sakira 3.0. Dentro de la coleccion de palas de pádel Drop Shot conoce la nueva Drop Shot Sakura 3.0, una pala destinada a todo jugador que se inicia en el pádel, sin importar edad o género.La pala Drop Shot Sakura 3.0 es una pala que combina materiales flexibles con la goma Eva Soft, asi consigue una gran pegada y un amplio punto dulce en el golpeo.Gracias a la tecnología Cork Grip, las vibraciones en el golpeo son reducidas combinado con un marco de doble tubular de carbono.Una pala diseñada para jugadores de nivel iniciación avanzado que buscan un producto que aporte potencia y confort a su juego.",
         stock: 5,
         price: 180000,
         image: "/img/paleta-dropshot-sakura.jpg",
@@ -44,7 +44,7 @@ const products = [
         stock: 5,
         price: 80000,
         image: "/img/bolso-odpro.png",
-        category: "bolsos"
+        category: ""
     },
     {
         id: "Mk3434",
@@ -62,7 +62,7 @@ const getProducts = ( ) => {
     return new Promise((resolve, reject) => {
         setTimeout (() => {
             resolve (products)
-        }, 2000)
+        }, 0)
     })
 }
 

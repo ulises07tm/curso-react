@@ -1,6 +1,6 @@
 /* carrito vacio */
 
-.div-cart {
+.div-empty-cart {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -8,15 +8,15 @@
     margin: 5rem;
 }
 
-.h2-cart {
+.h2-empty-cart {
     font-size: 4rem;
     margin-top: 17rem;
 }       
 
-.link-cart {
-    color: cornflowerblue;
-    background-color: white; 
-    border: 3px solid cornflowerblue;
+.link-empty-cart {
+    color: white;
+    background-color: cornflowerblue; 
+    border: 3px solid white;
     border-radius: 10px ;
     width: 30rem;
     height: 5rem;
@@ -27,4 +27,109 @@
 }
 
 /* carrito lleno */
+
+.div-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.brand-cart {
+    color: white;
+    background-color: cornflowerblue; 
+    border: 3px solid white;
+    border-radius: 10px ;
+    width: 45rem;
+    height: 5rem;
+    font-size: 3rem ;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+} 
+
+.div-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem;
+    color: cornflowerblue;
+    background-color: white; 
+    border: 3px solid cornflowerblue;
+    border-radius: 15px ;
+}   
+
+.div-cart p {
+    font-size: 2rem ;
+    text-align: center;
+}   
+.div-cart img {
+    border: 6px solid white;
+    border-radius: 10px ;
+    width: 7%;
+    background-size: cover; 
+    background-position: center; 
+}   
+.div-cart button {
+    color: red;
+    background-color: brown; 
+    border: 3px solid red;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.div-cart button:hover {
+    cursor: pointer;
+}
+
+
+
+.div-secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-secondary a{
+    color: white;
+    background-color: cornflowerblue; 
+    border: 3px solid white;
+    border-radius: 10px ;
+    font-size: 2rem;
+    width: 25rem;
+    height: 3.6rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.total-cart {
+    color: cornflowerblue;
+    background-color: white; 
+    border: 3px solid cornflowerblue;
+    border-radius: 10px ;
+    width: 27rem;
+    height: 3.6rem;
+    font-size: 2rem ;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.delete-cart {
+    color: red;
+    background-color: brown; 
+    border: 3px solid red;
+    border-radius: 10px ;
+    width: 20rem;
+    height: 3.6rem;
+    font-size: 2rem ;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+.delete-cart:hover {
+    cursor: pointer;
+}
 

@@ -1,8 +1,9 @@
 import "./itemlistcontainer.css"
-import React, { useEffect, useState} from 'react'
-import { getProducts } from '../../data/data'
-import { useParams } from "react-router-dom"
 import ItemList from './ItemList.jsx'
+import React, { useEffect, useState} from 'react'
+import { useParams } from "react-router-dom"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import db from "../../db/db.js"
 
 const ItemListContainer = ( { bienvenida } ) => {
 
@@ -10,25 +11,49 @@ const ItemListContainer = ( { bienvenida } ) => {
     const [loading, setLoading] = useState(true)
     const { idCategory } = useParams()
 
+
+
+const getProducts = () => {
+    const productsRef= collection( db, "products" )
+    setLoading(true) 
+
+
+    getDocs(productsRef)
+        .then((dataDb) => {
+            const productsDb = dataDb.docs.map((productDb) => {
+                return { id: productDb.id, ...productDb.data() }              
+            })
+            setProducts(productsDb)
+        })
+        .finally(() => setLoading(false))
+    }
+
+
+    const getProductsByCategory = () => {
+        const productsRef = collection(db, "products")
+        const queryCategories = query(  productsRef, where("category", "==", idCategory) )
+        
+        setLoading(true);
+        
+        getDocs(queryCategories)
+            .then((dataDb) => {
+                const productsDb = dataDb.docs.map((productDb) => {
+                    return { id: productDb.id, ...productDb.data() }              
+                })
+                setProducts(productsDb)
+            })
+            .finally(() => setLoading(false));
+    }
+
+
+
     useEffect(()=> {
-        setLoading(true)
 
-        getProducts()
-        .then ((data) =>{
-            if (idCategory) {
-                const filterProducts = data.filter ( (product) => product.category === idCategory )
-                setProducts(filterProducts)
-            } else {
-                setProducts(data)
-            }
-
-        })
-        .catch ((error) => {
-            console.error (error)
-        })
-        .finally (() => {
-            setLoading(false)
-        })
+        if(idCategory){
+            getProductsByCategory()
+        }else{
+            getProducts()
+        }
 
     }, [idCategory])
 

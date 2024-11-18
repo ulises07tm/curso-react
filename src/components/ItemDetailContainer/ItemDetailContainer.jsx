@@ -1,26 +1,36 @@
 import "./itemdetail.css"
 import ItemDetail from "./ItemDetail"
 import { useState, useEffect } from "react"
-import { getProducts } from "../../data/data"
 import { useParams } from "react-router-dom"
+import { doc, getDoc } from "firebase/firestore"
+import db from "../../db/db.js"
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState ({})
   const [loading, setLoading] = useState(true)
   const {idProduct} = useParams()
+
+
+
+  const getProductById = () => {
+    const docRef = doc( db, "products", idProduct )
+    getDoc(docRef)
+      .then((dataDb) => {
+        const productDb = { id: dataDb.id, ...dataDb.data() }
+        setProduct(productDb)
+      })
+      .catch((error) => {
+        console.error("Error al obtener el producto: ", error)
+      })
+      .finally(() => {
+        setLoading(false)
+      });
+  }
   
   useEffect( () => {
     setLoading(true)
 
-    getProducts()
-      .then((data) => {
-        const findProduct= data.find ( (product) => product.id === idProduct )
-        setProduct(findProduct)
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false); // Cambia loading a false en caso de error también
-      });
+    getProductById()
 
   }, [idProduct] )
 

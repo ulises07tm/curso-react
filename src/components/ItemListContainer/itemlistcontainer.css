@@ -10,7 +10,7 @@
 .secondarybrand {
     color: white;
     font-size: 4.5rem;
-    margin-top: 8rem;
+    margin-top: 6rem;
     margin-bottom: 14rem;
 }
 .product-grid {
@@ -50,4 +50,5 @@
     justify-content: center;
     text-align: center;
     font-size: 4rem;
+    margin-top: 8rem;
 }
