@@ -1,6 +1,6 @@
 # La Franchesca Padel
 
-![Captura de pantalla](img/captura-pantalla.png)
+![Captura de pantalla de la aplicación](public/img/captura-pantalla.png)
 
 ## Descripcion
 Esta aplicación de e-commerce para la tienda de "Franchesca Padel" permite a los usuarios explorar una variedad de productos de manera intuitiva y eficiente, facilitando la compra de artículos de padel y deportivos. El usuario puede navegar por categorías, ver detalles de cada producto y añadirlos a su carrito de compras. Durante el proceso de compra, la aplicación ofrece la opción de finalizar la transacción con un formulario de checkout, el cual valida la información ingresada antes de confirmar el pedido. Una vez completada la compra, se genera un número de seguimiento que se muestra en pantalla y permite al usuario llevar un registro de su pedido.
